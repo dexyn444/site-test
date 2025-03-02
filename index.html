@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="azul.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    (function(){
+        emailjs.init("SEU_USER_ID"); // Substitua pelo seu User ID do EmailJS
+    })();
+</script>
+    <title>Barbearia - Login e Cadastro</title>
+  
+</head>
+<body>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="menu" id="menu">
+        <a href="#" onclick="mostrarCadastro()">Cadastro</a>
+        <a href="#" onclick="mostrarLogin()">Login</a>
+        <a href="#" onclick="mostrarPrecos()">Preços</a>
+        <a href="#" onclick="mostrarAgenda()">Agendar Horário</a>
+    </div>
+    
+    <div class="container" id="conteudo">
+        <img src="modelo-de-logotipo-de-barbearia-vector-comb-e-tesoura-modelo-de-logotipo-de-barbearia-vintage-vector_856335-1152.avif" alt="Logo Barbearia" class="logo">
+        
+        <div id="cadastro">
+            <h2>Cadastro</h2>
+            <input type="text" id="nome" placeholder="Nome" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="senha" placeholder="Senha" required>
+            <button onclick="cadastrar()">Cadastrar</button>
+            <p>Já tem uma conta? <a href="#" onclick="mostrarLogin()">Faça login</a></p>
+        </div>
+
+        <div id="login" class="hidden">
+            <h2>Login</h2>
+            <input type="email" id="loginEmail" placeholder="Email" required>
+            <input type="password" id="loginSenha" placeholder="Senha" required>
+            <button onclick="login()">Entrar</button>
+            <p>Não tem uma conta? <a href="#" onclick="mostrarCadastro()">Cadastre-se</a></p>
+        </div>
+
+        <div id="precos" class="hidden">
+            <h2>Preços</h2>
+            <p>Corte de cabelo: R$ 40,00</p>
+            <p>Barba: R$ 30,00</p>
+            <p>Pacote completo (Corte + Barba): R$ 60,00</p>
+        </div>
+
+        <div id="agenda" class="hidden">
+            <h2>Agendar Horário</h2>
+            <input type="date" id="dataAgendamento" required>
+            <input type="time" id="horaAgendamento" required>
+            <button onclick="agendarHorario()">Agendar</button>
+        </div>
+    </div>
+
+    
+</body>
+</html>
