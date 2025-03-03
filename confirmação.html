@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Agendamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agendamento Confirmado!</h1>
+        <p>Você agendou o corte de cabelo para o horário:</p>
+        <h2 id="horario"></h2>
+        <button onclick="window.location.href='index.html'">Voltar</button>
+    </div>
+
+    <script>
+        // Obtém o horário da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const selectedTime = urlParams.get('time');
+
+        // Exibe o horário na tela
+        document.getElementById('horario').textContent = selectedTime;
+    </script>
+</body>
+</html>
