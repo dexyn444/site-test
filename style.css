@@ -1,223 +1,35 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.container {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-h1 {
-    margin-bottom: 20px;
-}
-
-.slider {
-    overflow: hidden;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.slides {
-    display: flex;
-    animation: slide 10s infinite;
-}
-
-.slide {
-    min-width: 100px;
-    margin: 0 15px;
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 18px;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.5s ease-in-out;
-}
-
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(-100%);
-    }
-    50% {
-        transform: translateX(-200%);
-    }
-    75% {
-        transform: translateX(-300%);
-    }
-    100% {
-        transform: translateX(-400%);
-    }
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #28a745;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    opacity: 0.5;
-}
-
-button:enabled {
-    opacity: 1;
-}
-
-button:hover {
-    background-color: #218838;
-}
-
-  
-
-  
- 
- body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #070707;
-            margin: 0;
-        }
-        .menu-toggle {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: none;
-            border: none;
-            font-size: 30px;
-            cursor: pointer;
-            color: #011d38;
-        }
-        .menu {
-            position: absolute;
-            top: 0;
-            left: -250px;
-            width: 250px;
-            height: 100%;
-            background: #011d38;
-            padding-top: 60px;
-            transition: 0.3s;
-        }
-        .menu a {
-            display: block;
-            color: white;
-            padding: 15px;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        .menu a:hover {
-            background: #011d38;
-        }
-        .menu.active {
-            left: 0;
-        }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            width: 350px;
-        }
-        h2 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-        input {
-            display: block;
-            width: calc(100% - 20px);
-            margin: 12px auto;
-            padding: 14px;
-            border: 2px solid #011d38;
-            border-radius: 8px;
-            font-size: 16px;
-            outline: none;
-        }
-        button {
-            background: #4ca1af;
-            color: white;
-            border: none;
-            padding: 14px;
-            width: 100%;
-            cursor: pointer;
-            font-size: 18px;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-        button:hover {
-            background-image: url(#4ca1af);
-        }
-        .logo {
-            width: 80px;
-            margin-bottom: 15px;
-        }
-        .hidden {
-            display: none;
-        }
-        .logo{
-            width: 200px;
-        }
-        .hidden {
-            display: none;
-        }
-        #confirmacao {
-            background: #dff0d8;
-            color: #3c763d;
-            padding: 10px;
-            border-radius: 5px;
-            margin-top: 15px;
-            font-weight: bold;
-        }
-        @media (max-width: 450px) {
-            body{
-                background-color: rgb(0, 0, 0);
-            }
-            .logo{
-                width: 120px;
-            }
-            p{
-                width: 300px;
-            }
-            
-            button{
-                width: 100%;
-                height: 60px;
-                
-            }
-            .container{
-                width: 260px;
-            }
-            .menu {
-                position: absolute;
-                top: 0;
-                left: -250px;
-                width: 250px;
-                height: 100%;
-                background: #011d38;
-                padding-top: 80px;
-                transition: 0.3s;
-            }
-            
-        }
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Corte de Cabelo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agende seu Corte de Cabelo</h1>
         
+        <div class="slider">
+            <div class="slides">
+                <div class="slide" data-time="08:00">08:00</div>
+                <div class="slide" data-time="09:00">09:00</div>
+                <div class="slide" data-time="10:00">10:00</div>
+                <div class="slide" data-time="11:00">11:00</div>
+                <div class="slide" data-time="13:00">13:00</div>
+                <div class="slide" data-time="14:00">14:00</div>
+                <div class="slide" data-time="15:00">15:00</div>
+                <div class="slide" data-time="16:00">16:00</div>
+                <div class="slide" data-time="17:00">17:00</div>
+                <div class="slide" data-time="18:00">18:00</div>
+                <div class="slide" data-time="19:00">19:00</div>
+
+            </div>
+        </div>
+
+        <button id="agendar" disabled>Agendar</button>
+    </div>
+
+    <script src="agendamento.js"></script>
+</body>
+</html>
