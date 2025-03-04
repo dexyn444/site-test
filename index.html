@@ -14,8 +14,9 @@
     <title>Barbearia - Login e Cadastro</title>
   
 </head>
-<body>
 
+<body>
+    
     
     <div class="container" id="conteudo">
         <img src="modelo-de-logotipo-de-barbearia-vector-comb-e-tesoura-modelo-de-logotipo-de-barbearia-vintage-vector_856335-1152.avif" alt="Logo Barbearia" class="logo">
@@ -33,7 +34,7 @@
             <h2>Login</h2>
             <input type="email" id="loginEmail" placeholder="Email" required>
             <input type="password" id="loginSenha" placeholder="Senha" required>
-            <button onclick="login()">Entrar</button>
+            <button onclick="window.location.href='agendamento.html'">Agendar</button>
             <p>Não tem uma conta? <a href="#" onclick="mostrarCadastro()">Cadastre-se</a></p>
         </div>
 
@@ -48,9 +49,13 @@
             <h2>Agendar Horário</h2>
             <input type="date" id="dataAgendamento" required>
             <input type="time" id="horaAgendamento" required>
-            <button onclick="agendarHorario()">Agendar</button>
+            
         </div>
+       
+        
     </div>
+  
+    
 
     
 </body>
